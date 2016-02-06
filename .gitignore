@@ -43,3 +43,10 @@ temp
 
 # sensitive config file
 config-var.js
+
+# fron end dependancies
+# to install first install bower globally using:
+# npm install -g bower
+# then run command in public directory
+# bower install
+public/bower_components
