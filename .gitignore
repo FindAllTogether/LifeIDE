@@ -40,3 +40,6 @@ public/images
 
 # Remove Temp files
 temp
+
+# sensitive config file
+config-var.js
