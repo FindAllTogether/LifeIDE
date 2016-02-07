@@ -7,5 +7,7 @@
  * Controller of the sbAdminApp
  */
 angular.module('sbAdminApp')
-  .controller('MainCtrl', function($scope,$position) {
+  .controller('MainCtrl', function($scope,$position, $state) {
+  	if(window.location.pathname == '/')
+  		$state.transitionTo('home.dashboard');
   });

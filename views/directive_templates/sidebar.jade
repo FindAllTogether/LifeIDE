@@ -1,0 +1,89 @@
+.navbar-default.sidebar(role='navigation')
+  .sidebar-nav.navbar-collapse
+    ul#side-menu.nav.in
+      sidebar-search
+      li(ui-sref-active='active')
+        a(ui-sref='home.dashboard')
+          i.fa.fa-dashboard.fa-fw
+          |  Dashboard
+      li(ng-class='{active: collapseVar==1}')
+        | {{dropDown}}
+        a(href='', ng-click='check(1)')
+          i.fa.fa-wrench.fa-fw
+          |  Appearance
+          span.fa.arrow
+        ul.nav.nav-second-level(collapse='collapseVar!=1')
+          li(ui-sref-active='active')
+            a(ui-sref='home.appearance_widgets') Widgets
+          li(ui-sref-active='active')
+            a(ui-sref='home.appearance_plugins') Plugins
+          li(ui-sref-active='active')
+            a(ui-sref='home.appearance_themes') Themes
+          li(ui-sref-active='active')
+            a(ui-sref='home.appearance_layouts') Layouts
+          li(ui-sref-active='active')
+            a(ui-sref='home.appearance_menus')  Menus
+        // /.nav-second-level
+      li(ng-class='{active: collapseVar==2}')
+        | {{dropDown}}
+        a(href='', ng-click='check(2)')
+          i.fa.fa-wrench.fa-fw
+          |  Forms
+          span.fa.arrow
+        ul.nav.nav-second-level(collapse='collapseVar!=2')
+          li(ui-sref-active='active')
+            a(ui-sref='home.forms_add') Add New
+          li(ui-sref-active='active')
+            a(ui-sref='home.forms_list') List All
+      li(ng-class='{active: collapseVar==3}')
+        | {{dropDown}}
+        a(href='', ng-click='check(3)')
+          i.fa.fa-wrench.fa-fw
+          |  API
+          span.fa.arrow
+        ul.nav.nav-second-level(collapse='collapseVar!=3')
+          li(ui-sref-active='active')
+            a(ui-sref='home.api_add') Add New
+          li(ui-sref-active='active')
+            a(ui-sref='home.api_list') List All
+      li(ng-class='{active: collapseVar==4}')
+        | {{dropDown}}
+        a(href='', ng-click='check(4)')
+          i.fa.fa-wrench.fa-fw
+          |  Users
+          span.fa.arrow
+        ul.nav.nav-second-level(collapse='collapseVar!=4')
+          li(ui-sref-active='active')
+            a(ui-sref='home.users_add') Add New
+          li(ui-sref-active='active')
+            a(ui-sref='home.users_list') List All
+      li(ng-class='{active: collapseVar==5}')
+        | {{dropDown}}
+        a(href='', ng-click='check(5)')
+          i.fa.fa-wrench.fa-fw
+          |  Logic
+          span.fa.arrow
+        ul.nav.nav-second-level(collapse='collapseVar!=5')
+          li(ui-sref-active='active')
+            a(ui-sref='home.logic_add') Add New
+          li(ui-sref-active='active')
+            a(ui-sref='home.logic_list') List All
+      li(ui-sref-active='active')
+        a(ui-sref='home.database')
+          i.fa.fa-bar-chart-o.fa-fw
+          |  Database
+          span
+      li(ui-sref-active='active')
+        a(ui-sref='home.crons')
+          i.fa.fa-bar-chart-o.fa-fw
+          |  Crons
+          span
+      li(ui-sref-active='active')
+        a(ui-sref='home.cache')
+          i.fa.fa-table.fa-fw
+          |  Cache
+      li(ui-sref-active='active')
+        a(ui-sref='home.apps')
+          i.fa.fa-edit.fa-fw
+          |  Apps
+  // /.sidebar-collapse
